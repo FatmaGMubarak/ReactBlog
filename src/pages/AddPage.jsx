@@ -41,7 +41,6 @@ export default function AddPage() {
   return (
 
     <form onSubmit={handleSubmit} className="max-w-screen-lg mx-auto p-4">
-      <h1>Hello</h1>
       <h4 className="mb-4 text-4xl">Add A New Post</h4>
       <label htmlFor="title" className="block mb-2 text-sm font-medium">Title</label>
       <input
