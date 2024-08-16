@@ -5,13 +5,13 @@ export default function useFetch(params = "", query = "") {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
+
   const fetchData = async () => {
     try {
       const res = await api.get(`${params}`, {
         params: { q: query },
       });
-      
-      if (Object.prototype.hasOwnProperty.call(res.data, "posts")) {
+      if (res.data.hasOwnProperty("posts")) {
         setData(res.data.posts);
       } else {
         setData(res.data);

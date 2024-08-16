@@ -45,7 +45,7 @@ export default function AddPage() {
       <label htmlFor="title" className="block mb-2 text-sm font-medium">Title</label>
       <input
         id="title"
-        className="border p-2 rounded-md mb-4 w-full"
+        className="form-control"
         type="text"
         placeholder="Post Title"
         value={title}
@@ -55,7 +55,7 @@ export default function AddPage() {
       <label htmlFor="desc" className="block mb-2 text-sm font-medium">Description</label>
       <textarea
         id="desc"
-        className="border p-2 rounded-md mb-4 w-full"
+        className="form-control form-control-lg"
         placeholder="Post Description"
         value={body}
         onChange={(e) => setBody(e.target.value)}
