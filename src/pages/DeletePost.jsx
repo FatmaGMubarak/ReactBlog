@@ -61,7 +61,7 @@ export default function DeletePost() {
           {data && (
             <>
               <p>Are you sure you want to delete the post with the title "{data.title}"?</p>
-              <Button onClick={handleDelete} className="mt-4 bg-red-600 text-white">
+              <Button type="submit" action={handleDelete} className="mt-4 bg-red-600 text-white">
                 Delete Post
               </Button>
             </>
