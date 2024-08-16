@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { api } from "../utils/axios";
 import Card from "../components/Card";
 import Loading from "../components/Loading";
-import Button from "../components/Button";
 
 export default function HomePage() {
   const [data, setData] = useState([]);
@@ -13,7 +12,7 @@ export default function HomePage() {
       try {
         const response = await fetch('https://dummyjson.com/posts');
         const result = await response.json();
-        setData(result.posts || result); // Update data
+        setData(result.posts || result);
       } catch (error) {
         console.error('Error fetching data:', error);
       } finally {
@@ -22,7 +21,7 @@ export default function HomePage() {
     };
 
     fetchData();
-  }, []); // Empty dependency array ensures this runs only once on mount
+  }, []);
 
   return (
     <>

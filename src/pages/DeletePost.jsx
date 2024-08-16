@@ -38,11 +38,11 @@ export default function DeletePost() {
 
       if (response.ok) {
         const result = await response.json();
-        console.log('Delete result:', result); // Log the result to check
+        console.log('Delete result:', result);
         setDeleted(true);
         setTimeout(() => {
-          navigate('/'); // Redirect to HomePage
-        }, 500); // Adding a delay to allow the deletion process to complete
+          navigate('/');
+        }, 500);
       } else {
         console.error('Delete failed with status:', response.status);
       }

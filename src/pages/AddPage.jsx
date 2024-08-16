@@ -15,7 +15,7 @@ export default function AddPage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          userId: 1, // You might want to dynamically set this value
+          userId: 1,
           title: title,
           body: body,
         }),
@@ -23,14 +23,13 @@ export default function AddPage() {
 
       if (response.ok) {
         const result = await response.json();
-        console.log('Add result:', result); // Log the result to check
+        console.log('Add result:', result);
         setAdded(true);
         setTitle("");
         setBody("");
-        // Redirect to HomePage after adding post
         setTimeout(() => {
           navigate('/');
-        }, 500); // Adding a delay to allow the addition process to complete
+        }, 500);
       } else {
         console.error('Add failed with status:', response.status);
       }
@@ -40,7 +39,9 @@ export default function AddPage() {
   };
 
   return (
+
     <form onSubmit={handleSubmit} className="max-w-screen-lg mx-auto p-4">
+      <h1>Hello</h1>
       <h4 className="mb-4 text-4xl">Add A New Post</h4>
       <label htmlFor="title" className="block mb-2 text-sm font-medium">Title</label>
       <input
