@@ -62,7 +62,7 @@ export default function AddPage() {
         rows="4"
         required
       />
-      <Button>ADD POST</Button>
+      <Button className="btn btn-primary">ADD POST</Button>
       {added && (
         <div className="p-4 mb-4 text-sm rounded-lg bg-blue-50" role="alert">
           <span className="font-medium">Post Added SUCCESSFULLY</span>

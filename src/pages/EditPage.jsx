@@ -81,7 +81,7 @@ export default function EditPage() {
             onChange={(e) => setBody(e.target.value)}
             rows="4"
           />
-          <Button type="submit">Update Post</Button>
+          <Button type="submit" className="btn btn-primary">Update Post</Button>
           {updated && (
             <div className="p-4 mb-4 text-sm rounded-lg bg-blue-50" role="alert">
               <span className="font-medium">Post Updated SUCCESSFULLY</span>

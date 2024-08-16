@@ -16,13 +16,11 @@ export default function PostPage() {
           <p className="my-4">{data.body}</p>
           <h4 className="mb-2">Tags</h4>
           <div className="flex items-center gap-2">
-            {data.tags.map((e, i) => {
-              return (
-                <span className="bg-primary text-white p-1 rounded-md" key={i}>
-                  {e}
-                </span>
-              );
-            })}
+            {data.tags && data.tags.map((e, i) => (
+              <span className="bg-primary text-white p-1 rounded-md" key={i}>
+                {e}
+              </span>
+            ))}
           </div>
         </div>
       )}
